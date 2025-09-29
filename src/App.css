@@ -1,0 +1,88 @@
+body {
+  background-image: url('/bryce.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #fef6f0; /* fallback desert-tan tone */
+  /* margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fef8f2;
+  color: #4b2e2e; */
+}
+
+a {
+  color: #b94e32;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  color: #8b3a25;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.park-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #e67348;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #cc5c2c;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.park-card {
+  background-color: #fff3e6;
+  border: 1px solid #deb887;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(139, 58, 37, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-button {
+  background-color: #c94c4c;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.delete-button:hover {
+  background-color: #a33b3b;
+}
