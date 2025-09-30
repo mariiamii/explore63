@@ -14,9 +14,9 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   function handleAddToBucketList(park) {
-    console.log('🧠 Button clicked for:', park.fullName);
+    console.log('Button clicked for:', park.fullName);
 
-    console.log("park in EVENT HANDLER", park)
+    console.log('park in EVENT HANDLER', park);
     const simplifiedPark = {
       id: park.id,
       fullName: park.fullName,
@@ -33,17 +33,17 @@ const Home = () => {
       body: JSON.stringify(simplifiedPark),
     })
       .then((res) => {
-        console.log('📡 Response:', res);
+        console.log('Response:', res);
         if (!res.ok) {
-          throw new Error(`❌ Server responded with status ${res.status}`);
+          throw new Error(`Server responded with status ${res.status}`);
         }
         return res.json();
       })
       .then((data) => {
-        console.log('✅ Successfully added to bucket list:', data);
+        console.log('Successfully added to bucket list:', data);
       })
       .catch((error) => {
-        console.error('🚨 POST failed:', error);
+        console.error('POST failed:', error);
       });
   }
 
@@ -81,13 +81,17 @@ const Home = () => {
     fetchParks();
   }, []);
 
+  if (loading) {
+    return <p>Loading parks...</p>;
+  }
+
   return (
-    <div className="container">
+    <div className='container'>
       <h1>Explore63 – National Park Bucket List</h1>
       <h2>All National Parks</h2>
-      <div className="card-grid">
+      <div className='card-grid'>
         {parks.map((park) => (
-          <div key={park.id} className="park-card">
+          <div key={park.id} className='park-card'>
             <h3>
               {park.fullName} ({park.states})
             </h3>
